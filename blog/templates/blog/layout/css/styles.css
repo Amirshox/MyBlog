@@ -1,0 +1,15 @@
+.sidebar {
+    display: flex;
+}
+
+.actual img {
+    height: 100px;
+}
+.muted {
+    font-size: 12px;
+    color: #9d9d9d;
+}
+
+.span {
+    color: #83d4c0;
+}
