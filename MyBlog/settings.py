@@ -131,7 +131,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 2525
-EMAIL_HOST_USER = "amirshoxmuxitdinov@mail.ru"
-EMAIL_HOST_PASSWORD = "4748998amir"
+EMAIL_HOST_USER = "email@mail.ru"
+EMAIL_HOST_PASSWORD = "password"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
