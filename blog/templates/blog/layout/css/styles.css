@@ -109,3 +109,12 @@
     border-bottom: 1px solid #333;
     outline: none;
 }
+.footer {
+    background-color: #292c2f;
+}
+.footer a {
+    color: #999;
+}
+.footer h5 {
+    color: #bbb;
+}
