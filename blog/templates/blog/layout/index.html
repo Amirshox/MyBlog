@@ -12,55 +12,61 @@
 <body>
 <div id="app">
     <div class="container">
-        <nav class="navbar navbar-expand-lg mb-3 navbar-light bg-light">
-            <a class="navbar-brand" href="#">My Blog</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Sign In<span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Sign Up</a>
+        <div class="stay">
+            <nav class="navbar navbar-expand-lg mb-3 navbar-light bg-light">
+                <a class="navbar-brand navbar-collapse" href="#">My Blog</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <div class="" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="html/sign-in.html">Sign In<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="html/sign-up.html">Sign Up</a>
+                    </div>
                 </div>
-            </div>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
+
+            </nav>
+        </div>
         <div class="sidebar">
             <div class="container">
                 <div class="row">
                     <div class="col-md">
-                        <h1 class="font-weight-light">My Blog</h1>
+                        <h1 class="header">My Blog</h1>
                     </div>
                     <div class="col-md">
-                        <h1 class="font-weight-light">New posts</h1>
+                        <h1 class="header">New posts</h1>
                     </div>
-                    <div class="col-md">
+                    <!--<div class="col-md">
                         <h1 class="font-weight-lighter">Latest posts</h1>
-                    </div>
+                    </div>-->
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-md">
+                    <div class="col-md-4">
                         <div class="left-side">
                             <p>This is Amirshokh`s blog. I have written 5 posts so far.</p>
+                            <hr>
                         </div>
                     </div>
-                    <div class="col-md">
+                    <div class="col-md-8">
                         <div class="file">
                             <h2>Title</h2>
                             <p>Tags: <span class="span">programming</span></p>
                             <p class="muted"><i>published January 1, 1970, 00:01 a.m by user</i></p>
+                            <img class="image" src="img/laptop.jpg" alt="">
                             <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, atque
                                 totam! Ad aliquam aperiam consequuntur cupiditate dicta distinctio dolorum ducimus ea
                                 exercitationem facere fuga fugit hic ipsa ipsam, itaque maiores, natus omnis possimus
                                 praesentium quam reprehenderit repudiandae sunt tempore ut.</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam aspernatur cum dolor dolorum eius facere laboriosam nesciunt numquam quibusdam quis quos recusandae repudiandae, sed sit ullam unde? Accusantium alias eaque esse itaque quas quis recusandae reprehenderit sequi. Alias fugit iste laboriosam recusandae repellendus! Beatae blanditiis consectetur, magni nam perferendis quo vitae! Ea facere nisi non omnis tempora velit.</p>
                         </div>
                     </div>
-                    <div class="col-md">
+                    <!--<div class="col-md">
                         <div class="right-side">
                             <div class="actual">
                                 <div class="row">
@@ -91,7 +97,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
 
