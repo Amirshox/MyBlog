@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'taggit',
     'ckeditor',
-    # 'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'django.contrib.sites',
     # 'django.contrib.sitemaps',
     # 'django.contrib.postgres',
 ]
@@ -135,3 +138,17 @@ EMAIL_HOST_USER = "email@mail.ru"
 EMAIL_HOST_PASSWORD = "password"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+LOGIN_REDIRECT_URL = '/blog'
+
+SOCIALACCOUNT_PROVIDERS = {
+
+}
