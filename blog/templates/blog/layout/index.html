@@ -14,13 +14,13 @@
     <div class="container">
         <div class="stay">
             <nav class="navbar navbar-expand-lg mb-3 navbar-light bg-light">
-                <a class="navbar-brand navbar-collapse" href="#">My Blog</a>
+                <a class="navbar-brand navbar-collapse" href="index.html">My Blog</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2" id="input" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <div class="" id="navbarNavAltMarkup">
@@ -55,15 +55,18 @@
                     </div>
                     <div class="col-md-8">
                         <div class="file">
-                            <h2>Title</h2>
-                            <p>Tags: <span class="span">programming</span></p>
+                            <h2 class="header">Hello world</h2>
+                            <p><strong>Tag:</strong> <span class="span">programming</span></p>
                             <p class="muted"><i>published January 1, 1970, 00:01 a.m by user</i></p>
                             <img class="image" src="img/laptop.jpg" alt="">
                             <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, atque
                                 totam! Ad aliquam aperiam consequuntur cupiditate dicta distinctio dolorum ducimus ea
                                 exercitationem facere fuga fugit hic ipsa ipsam, itaque maiores, natus omnis possimus
-                                praesentium quam reprehenderit repudiandae sunt tempore ut.</strong></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam aspernatur cum dolor dolorum eius facere laboriosam nesciunt numquam quibusdam quis quos recusandae repudiandae, sed sit ullam unde? Accusantium alias eaque esse itaque quas quis recusandae reprehenderit sequi. Alias fugit iste laboriosam recusandae repellendus! Beatae blanditiis consectetur, magni nam perferendis quo vitae! Ea facere nisi non omnis tempora velit.</p>
+                                praesentium quam reprehenderit repudiandae sunt tempore ut.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam aspernatur cum dolor dolorum eius facere laboriosam nesciunt numquam quibusdam quis quos recusandae repudiandae, sed sit ullam unde? Accusantium alias eaque esse itaque quas quis recusandae reprehenderit sequi. Alias fugit iste laboriosam recusandae repellendus! Beatae blanditiis consectetur, magni nam perferendis quo vitae! Ea facere nisi non omnis tempora velit.</strong></p>
+                            <hr>
+                            <input type="text" class="comment" name="comment:" placeholder="comment:" id="">
+                            <button class="btn btn-dark">submit</button>  
                         </div>
                     </div>
                     <!--<div class="col-md">
@@ -104,5 +107,6 @@
         </div>
     </div>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>
