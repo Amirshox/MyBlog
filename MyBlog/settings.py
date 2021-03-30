@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django.contrib.sites',
+    'hitcount',
     # 'django.contrib.sitemaps',
     # 'django.contrib.postgres',
 ]

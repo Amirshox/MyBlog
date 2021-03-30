@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
 {% load blog_tags %}
+{% load hitcount_tags %}
 
 {% block title %}{{ post.title }}{% endblock %}
 
@@ -14,6 +15,8 @@
             Share this post
         </a>
     </p>
+    <p>Views: {% get_hit_count for post %}</p>
+
     <h2>Similar posts</h2>
     {% for post in similar_posts %}
         <p>
