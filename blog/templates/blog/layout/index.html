@@ -11,29 +11,10 @@
 </head>
 <body>
 <div id="app">
-    <div class="container">
-        <header>
-            <div class="stay">
-                <nav class="navbar navbar-expand-lg mb-3 navbar-light bg-light">
-                    <a class="navbar-brand navbar-collapse" href="index.html">My Blog</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" id="input" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                    <div class="" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="html/sign-in.html">Sign In<span class="sr-only">(current)<span><a>
-                            <a class="nav-item nav-link" href="html/sign-up.html">Sign Up</a>
-                        </div>
-                    </div>
 
-                </nav>
-            </div>
-        </header>
+    {% include 'header.html' %}
+
+    <div class="container">
         <sidebar>
             <div class="sidebar">
                 <div class="container">
@@ -110,57 +91,7 @@
         </sidebar>
     </div>
 
-    <footer class="footer mt-5 pt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <h5> ACME CO INC</h5>
-                    <div class="row text">
-                        <div class="col-6">
-                            <ul class="list-unstyled">
-                                <li><a href="">Product</a></li>
-                                <li><a href="">Benefits</a></li>
-                                <li><a href="">Partners</a></li>
-                                <li><a href="">Team</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled">
-                                <li><a href="">Documentation</a></li>
-                                <li><a href="">Support</a></li>
-                                <li><a href="">Legal Terms</a></li>
-                                <li><a href="">About</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="nav">
-                        <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
-                        <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-                        <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
-                        <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
-                    </ul>
-                    <br>
-                </div>
-                <div class="col-md-2">
-                    <h5 class="text-md-right">Contact Us</h5>
-                    <hr>
-                </div>
-                <div class="col-md-5">
-                    <form>
-                        <fieldset class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
-                        </fieldset>
-                        <fieldset class="form-group text-xs-right">
-                            <button type="button" class="btn btn-secondary-outline btn-light btn-lg">Send</button>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include 'footer.html' %}
 
 </div>
 <script src="js/main.js"></script>

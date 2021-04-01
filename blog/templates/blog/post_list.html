@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% load blog_tags %}
+{% load hitcount_tags %}
+
+
+{% block content %}
+    <section class="section first-section">
+        <div class="container-fluid">
+            <div class="masonry-blog clearfix">
+                <div class="first-slot">
+                    <div class="masonry-box post-media">
+                        <img src="{{ first_slot.image.url }}" alt="" class="img-fluid">
+                        <div class="shadoweffect">
+                            <div class="shadow-desc">
+                                <div class="blog-meta">
+                                    <span class="bg-orange"><a href="tech-category-01.html"
+                                                               title="">Technology</a></span>
+                                    <h4><a href="tech-single.html" title="">{{ first_slot.title }}</a></h4>
+                                    <small><a href="tech-single.html" title="">{{ first_slot.publish|date }}</a></small>
+                                    <small><a href="tech-author.html" title="">by {{ first_slot.author }}</a></small>
+                                </div><!-- end meta -->
+                            </div><!-- end shadow-desc -->
+                        </div><!-- end shadow -->
+                    </div><!-- end post-media -->
+                </div><!-- end first-side -->
+
+                <div class="second-slot">
+                    <div class="masonry-box post-media">
+                        <img src="{{ first_slot.image.url }}" alt="" class="img-fluid">
+                        <div class="shadoweffect">
+                            <div class="shadow-desc">
+                                <div class="blog-meta">
+                                    <span class="bg-orange"><a href="tech-category-01.html" title="">Gadgets</a></span>
+                                    <h4><a href="tech-single.html" title="">{{ second_slot.title }}</a></h4>
+                                    <small><a href="tech-single.html" title="">{{ second_slot.publish|date }}</a></small>
+                                    <small><a href="tech-author.html" title="">by {{ second_slot.author }}</a></small>
+                                </div><!-- end meta -->
+                            </div><!-- end shadow-desc -->
+                        </div><!-- end shadow -->
+                    </div><!-- end post-media -->
+                </div><!-- end second-side -->
+
+                <div class="last-slot">
+                    <div class="masonry-box post-media">
+                        <img src="{{ last_slot.image.url }}" alt="" class="img-fluid">
+                        <div class="shadoweffect">
+                            <div class="shadow-desc">
+                                <div class="blog-meta">
+                                    <span class="bg-orange"><a href="tech-category-01.html"
+                                                               title="">Technology</a></span>
+                                    <h4><a href="tech-single.html" title="">{{ last_slot.title }}</a></h4>
+                                    <small><a href="tech-single.html" title="">{{ last_slot.publish|date }}</a></small>
+                                    <small><a href="tech-author.html" title="">by {{ last_slot.author }}</a></small>
+                                </div><!-- end meta -->
+                            </div><!-- end shadow-desc -->
+                        </div><!-- end shadow -->
+                    </div><!-- end post-media -->
+                </div><!-- end second-side -->
+            </div><!-- end masonry -->
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-wrapper">
+                        <div class="blog-top clearfix">
+                            <h4 class="pull-left">Recent Posts <a href="#"><i class="fa fa-rss"></i></a></h4>
+                        </div><!-- end blog-top -->
+
+                        <div class="blog-list clearfix">
+
+                            {% for post in posts %}
+                                <div class="blog-box row">
+                                    <div class="col-md-4">
+                                        <div class="post-media">
+                                            <a href="{{ post.get_absolute_url }}" title="">
+                                                <img src="{{ post.image.url }}" alt="" class="img-fluid">
+                                                <div class="hovereffect"></div>
+                                            </a>
+                                        </div><!-- end media -->
+                                    </div><!-- end col -->
+
+                                    <div class="blog-meta big-meta col-md-8">
+                                        <h4><a href="{{ post.get_absolute_url }}" title="">{{ post.title }}</a></h4>
+                                        <p>{{ post.body|truncatewords:30|safe|linebreaks }}</p>
+                                        <small class="firstsmall"><a class="bg-orange" href="" title="">Gadgets</a></small>
+                                        <hr class="invis">
+                                        <small><a href="#" title="">{{ post.publish|date }}</a></small>
+                                        <small><a href="#" title="">by {{ post.author }}</a></small>
+                                        <small><a href="#" title=""><i class="fa fa-eye"></i> {% get_hit_count for post %}</a></small>
+                                    </div><!-- end meta -->
+                                </div><!-- end blog-box -->
+
+                                <hr class="invis">
+                            {% endfor %}
+
+                        </div><!-- end blog-list -->
+                    </div><!-- end page-wrapper -->
+
+                    <hr class="invis">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-start">
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div><!-- end col -->
+
+                {% include 'blog/widget.html' %}
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+{% endblock %}

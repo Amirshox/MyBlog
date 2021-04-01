@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+.sidebar {
+    display: flex;
+}
+
+.actual img {
+    height: 100px;
+}
+.muted {
+    font-size: 12px;
+    color: #9d9d9d;
+}
+
+.span {
+    color: #83d4c0;
+}
+.header {
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.login-box h2 {
+    color: #fff;
+    margin: 0 0 30px 0;
+    padding: 0;
+    text-align: center;
+}
+.login-box .user-box {
+    position: relative;
+}
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
+.login-box .user-box input:hover {
+    cursor: pointer;
+}
+.login-box .user-box label {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label, .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+#button {
+    width: 100%;
+    padding: 10px;
+    background: #0c5460;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+}
+#button:hover {
+    background: #0f6674;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.image {
+    width: 100%;
+    height: 300px;
+}
+.stay {
+    position: sticky;
+    top: 0;
+    z-index: 1071;
+}
+
+.comment {
+    width: 70%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+}
+.footer {
+    background-color: #292c2f;
+}
+.footer a {
+    color: #999;
+}
+.footer h5 {
+    color: #bbb;
+}

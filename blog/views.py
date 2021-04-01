@@ -14,6 +14,12 @@ def post_list(request, tag_slug=None):
     object_list = Post.published.all()
     tag = None
 
+    first_slot = object_list[0]
+    second_slot = object_list[1]
+    last_slot = object_list[2]
+
+    object_list = object_list[2:]
+
     if tag_slug:
         tag = get_object_or_404(Tag, slug=tag_slug)
         object_list = object_list.filter(tags__in=[tag])
@@ -29,8 +35,9 @@ def post_list(request, tag_slug=None):
         # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
 
-    context = {'page': page, 'posts': posts, 'tag': tag}
-    return render(request, 'blog/post/list.html', context=context)
+    context = {'page': page, 'posts': posts, 'tag': tag, 'first_slot': first_slot, 'second_slot': second_slot,
+               'last_slot': last_slot}
+    return render(request, 'blog/post_list.html', context=context)
 
 
 def post_detail(request, year, month, day, post):
