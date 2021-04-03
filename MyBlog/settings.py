@@ -31,6 +31,7 @@ SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
+    'hitcount',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +45,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django.contrib.sites',
-    'hitcount',
+    'widget_tweaks',
     # 'django.contrib.sitemaps',
     # 'django.contrib.postgres',
 ]
@@ -152,6 +153,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 LOGIN_REDIRECT_URL = '/blog'
+LOGOUT_REDIRECT_URL = '/blog'
 
 SOCIALACCOUNT_PROVIDERS = {
 

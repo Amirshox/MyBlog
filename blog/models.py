@@ -24,10 +24,8 @@ class Post(models.Model):
     body = RichTextField(verbose_name='Blog_Content')
     image = models.ImageField(upload_to='posts/%Y/%m/%d')
     publish = models.DateTimeField(default=timezone.now)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
-    hit_count_generic = GenericRelation(HitCount, object_id_field='object_p',
+    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
                                         related_query_name='hit_count_generic_relation')
 
     objects = models.Manager()  # The default manager.
@@ -46,15 +44,13 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    publish = models.DateTimeField(default=timezone.now)
     active = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ('created',)
+        ordering = ('publish',)
 
     def __str__(self):
-        return f'Comment by {self.name} on {self.post}'
+        return f'Comment by {self.author.username} on {self.post}'

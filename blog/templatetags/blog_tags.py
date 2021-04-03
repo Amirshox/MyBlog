@@ -1,5 +1,5 @@
 from django import template
-from django.db.models import Count
+from django.db.models import Count, Sum
 from django.utils.safestring import mark_safe
 import markdown
 from ..models import Post
@@ -19,7 +19,12 @@ def show_latest_posts(count=5):
 
 
 @register.simple_tag
-def get_most_commented_posts(count=5):
+def get_most_viewed_posts(count=3):
+    return Post.published.order_by('-hit_count_generic__hits')[:count]
+
+
+@register.simple_tag
+def get_most_commented_posts(count=3):
     return Post.published.annotate(
         total_comments=Count('comments')
     ).order_by('-total_comments')[:count]

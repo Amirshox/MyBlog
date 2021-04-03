@@ -1,92 +1,45 @@
-
-
+{% load blog_tags %}
 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
     <div class="sidebar">
 
         <div class="widget">
             <h2 class="widget-title">Popular Posts</h2>
+            {% get_most_viewed_posts as most_viewed_posts %}
             <div class="blog-list-widget">
                 <div class="list-group">
-                    <a href="tech-single.html"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="w-100 justify-content-between">
-                            <img src="upload/tech_blog_08.jpg" alt="" class="img-fluid float-left">
-                            <h5 class="mb-1">5 Beautiful buildings you need..</h5>
-                            <small>12 Jan, 2016</small>
-                        </div>
-                    </a>
-
-                    <a href="tech-single.html"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="w-100 justify-content-between">
-                            <img src="upload/tech_blog_01.jpg" alt="" class="img-fluid float-left">
-                            <h5 class="mb-1">Let's make an introduction for..</h5>
-                            <small>11 Jan, 2016</small>
-                        </div>
-                    </a>
-
-                    <a href="tech-single.html"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="w-100 last-item justify-content-between">
-                            <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid float-left">
-                            <h5 class="mb-1">Did you see the most beautiful..</h5>
-                            <small>07 Jan, 2016</small>
-                        </div>
-                    </a>
+                    {% for post in most_viewed_posts %}
+                        <a href="{{ post.get_absolute_url }}"
+                           class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="w-100 justify-content-between">
+                                <img src="{{ post.image.url }}" alt="" class="img-fluid float-left">
+                                <h5 class="mb-1">{{ post.title|truncatechars:25 }}</h5>
+                                <small>{{ post.publish|date }}</small>
+                            </div>
+                        </a>
+                    {% endfor %}
                 </div>
             </div><!-- end blog-list -->
         </div><!-- end widget -->
 
         <div class="widget">
-            <h2 class="widget-title">Recent Reviews</h2>
+            <h2 class="widget-title">Most Commented</h2>
+            {% get_most_commented_posts as most_commented_posts %}
             <div class="blog-list-widget">
                 <div class="list-group">
-                    <a href="tech-single.html"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="w-100 justify-content-between">
-                            <img src="upload/tech_blog_02.jpg" alt="" class="img-fluid float-left">
-                            <h5 class="mb-1">Banana-chip chocolate cake recipe..</h5>
-                            <span class="rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </span>
-                        </div>
-                    </a>
-
-                    <a href="tech-single.html"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="w-100 justify-content-between">
-                            <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid float-left">
-                            <h5 class="mb-1">10 practical ways to choose organic..</h5>
-                            <span class="rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </span>
-                        </div>
-                    </a>
-
-                    <a href="tech-single.html"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="w-100 last-item justify-content-between">
-                            <img src="upload/tech_blog_07.jpg" alt="" class="img-fluid float-left">
-                            <h5 class="mb-1">We are making homemade ravioli..</h5>
-                            <span class="rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </span>
-                        </div>
-                    </a>
+                    {% for post in most_commented_posts %}
+                        <a href="{{ post.get_absolute_url }}"
+                           class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="w-100 justify-content-between">
+                                <img src="{{ post.image.url }}" alt="" class="img-fluid float-left">
+                                <h5 class="mb-1">{{ post.title|truncatechars:25 }}</h5>
+                                <small>{{ post.publish|date }}</small>
+                            </div>
+                        </a>
+                    {% endfor %}
                 </div>
             </div><!-- end blog-list -->
         </div><!-- end widget -->
+
+
     </div><!-- end sidebar -->
 </div><!-- end col -->

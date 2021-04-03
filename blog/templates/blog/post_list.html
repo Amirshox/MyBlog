@@ -13,10 +13,18 @@
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
-                                    <span class="bg-orange"><a href="tech-category-01.html"
-                                                               title="">Technology</a></span>
-                                    <h4><a href="tech-single.html" title="">{{ first_slot.title }}</a></h4>
-                                    <small><a href="tech-single.html" title="">{{ first_slot.publish|date }}</a></small>
+                                    {% for tag in first_slot.tags.all %}
+                                        <small class="firstsmall">
+                                                <span class="bg-orange">
+                                                    <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                                        {{ tag.name }}
+                                                        </a>
+                                                </span>
+                                        </small>
+                                    {% endfor %}
+                                    <h4><a href="{{ first_slot.get_absolute_url }}" title="">{{ first_slot.title }}</a>
+                                    </h4>
+                                    <small><a href='' title="">{{ first_slot.publish|date }}</a></small>
                                     <small><a href="tech-author.html" title="">by {{ first_slot.author }}</a></small>
                                 </div><!-- end meta -->
                             </div><!-- end shadow-desc -->
@@ -26,13 +34,23 @@
 
                 <div class="second-slot">
                     <div class="masonry-box post-media">
-                        <img src="{{ first_slot.image.url }}" alt="" class="img-fluid">
+                        <img src="{{ second_slot.image.url }}" alt="" class="img-fluid">
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
-                                    <span class="bg-orange"><a href="tech-category-01.html" title="">Gadgets</a></span>
-                                    <h4><a href="tech-single.html" title="">{{ second_slot.title }}</a></h4>
-                                    <small><a href="tech-single.html" title="">{{ second_slot.publish|date }}</a></small>
+                                    {% for tag in second_slot.tags.all %}
+                                        <small class="firstsmall">
+                                                <span class="bg-orange">
+                                                    <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                                        {{ tag.name }}
+                                                        </a>
+                                                </span>
+                                        </small>
+                                    {% endfor %}
+                                    <h4><a href="{{ second_slot.get_absolute_url }}"
+                                           title="">{{ second_slot.title }}</a></h4>
+                                    <small><a href="tech-single.html"
+                                              title="">{{ second_slot.publish|date }}</a></small>
                                     <small><a href="tech-author.html" title="">by {{ second_slot.author }}</a></small>
                                 </div><!-- end meta -->
                             </div><!-- end shadow-desc -->
@@ -46,9 +64,17 @@
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
-                                    <span class="bg-orange"><a href="tech-category-01.html"
-                                                               title="">Technology</a></span>
-                                    <h4><a href="tech-single.html" title="">{{ last_slot.title }}</a></h4>
+                                    {% for tag in last_slot.tags.all %}
+                                        <small class="firstsmall">
+                                                <span class="bg-orange">
+                                                    <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                                        {{ tag.name }}
+                                                        </a>
+                                                </span>
+                                        </small>
+                                    {% endfor %}
+                                    <h4><a href="{{ last_slot.get_absolute_url }}" title="">{{ last_slot.title }}</a>
+                                    </h4>
                                     <small><a href="tech-single.html" title="">{{ last_slot.publish|date }}</a></small>
                                     <small><a href="tech-author.html" title="">by {{ last_slot.author }}</a></small>
                                 </div><!-- end meta -->
@@ -84,12 +110,19 @@
 
                                     <div class="blog-meta big-meta col-md-8">
                                         <h4><a href="{{ post.get_absolute_url }}" title="">{{ post.title }}</a></h4>
-                                        <p>{{ post.body|truncatewords:30|safe|linebreaks }}</p>
-                                        <small class="firstsmall"><a class="bg-orange" href="" title="">Gadgets</a></small>
-                                        <hr class="invis">
+                                        <p>{{ post.body|truncatewords:30|markdown }}</p>
+                                        {% for tag in post.tags.all %}
+                                            <small class="firstsmall">
+                                                <a class="bg-orange" href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                                    {{ tag.name }}
+                                                </a>
+                                            </small>
+                                        {% endfor %}
+                                        <br>
                                         <small><a href="#" title="">{{ post.publish|date }}</a></small>
                                         <small><a href="#" title="">by {{ post.author }}</a></small>
-                                        <small><a href="#" title=""><i class="fa fa-eye"></i> {% get_hit_count for post %}</a></small>
+                                        <small><a href="#" title=""><i
+                                                class="fa fa-eye"></i> {% get_hit_count for post %}</a></small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
 
@@ -101,20 +134,7 @@
 
                     <hr class="invis">
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination justify-content-start">
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div><!-- end col -->
-                    </div><!-- end row -->
+                {% include 'blog/pagination.html' with page=posts %}
                 </div><!-- end col -->
 
                 {% include 'blog/widget.html' %}

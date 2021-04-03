@@ -25,21 +25,15 @@
                 </form>
                 <div class="" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="html/sign-in.html">Sign In<span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="html/sign-up.html">Sign Up</a>
+                        {% if user.is_authenticated %}
+                            <p>Welcome {{ user.username|capfirst }}</p>
+                            <a class="nav-item nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        {% else %}
+                            <a class="nav-item nav-link active" href="{% url 'account_login' %}">Sign In</a>
+                            <a class="nav-item nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+                        {% endif %}
                     </div>
                 </div>
-                <ul class="navbar-nav mr-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-android"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
-                    </li>
-                </ul>
             </div>
         </nav>
     </div><!-- end container-fluid -->

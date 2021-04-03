@@ -1674,3 +1674,8 @@ hr.invis3 {
     -o-border-radius: 50%;
     border-radius: 50%
 }
+
+.img-fluid {
+    width: 65px;
+    height: 65px;
+}
