@@ -6,7 +6,7 @@ from django.core.mail import send_mail
 from django.views.generic import ListView
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.contrib.postgres.search import TrigramSimilarity
-from .models import Post, Comment
+from .models import Post, Comment, Author
 from .forms import EmailPostForm, CommentForm, SearchForm
 from taggit.models import Tag
 from django.utils import timezone
@@ -26,7 +26,7 @@ def post_list(request, tag_slug=None):
         tag = get_object_or_404(Tag, slug=tag_slug)
         object_list = object_list.filter(tags__in=[tag])
 
-    paginator = Paginator(object_list, 1)  # 3 posts in each page
+    paginator = Paginator(object_list, 7)  # 7 posts in each page
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -36,8 +36,6 @@ def post_list(request, tag_slug=None):
     except EmptyPage:
         # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
-
-    print()
 
     context = {'page': page, 'posts': posts, 'tag': tag, 'first_slot': first_slot, 'second_slot': second_slot,
                'last_slot': last_slot}
@@ -114,3 +112,9 @@ def post_search(request):
 
     context = {'form': form, 'query': query, 'results': results}
     return render(request, 'blog/post/search.html', context=context)
+
+
+def author(request):
+    authors = Author.objects.all()
+    context = {'authors': authors}
+    return render(request, 'blog/author.html', context=context)

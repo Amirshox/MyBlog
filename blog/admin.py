@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post, Comment
+from .models import Post, Comment, Author
 
 
 @admin.register(Post)
@@ -25,3 +25,8 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('post', 'publish', 'active', 'author')
     list_filter = ('active', 'publish',)
     search_fields = ('body',)
+
+
+@admin.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
+    pass

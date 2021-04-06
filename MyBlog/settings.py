@@ -39,11 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
     'taggit',
     'ckeditor',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     'django.contrib.sites',
     'widget_tweaks',
     # 'django.contrib.sitemaps',
@@ -112,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uz'
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -144,17 +142,6 @@ EMAIL_HOST_PASSWORD = "password"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
 
 LOGIN_REDIRECT_URL = '/blog'
 LOGOUT_REDIRECT_URL = '/blog'
-
-SOCIALACCOUNT_PROVIDERS = {
-
-}

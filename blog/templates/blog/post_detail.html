@@ -27,7 +27,7 @@
                             <h3>{{ post.title }}</h3>
 
                             <div class="blog-meta big-meta">
-                                <small><a href="tech-single.html" title="">{{ post.publish }}</a></small>
+                                <small><a href="tech-single.html" title="">{{ post.publish|date:'d F Y' }}</a></small>
                                 <small><a href="tech-author.html" title="">by {{ post.author }}</a></small>
                                 <small><a href="#" title=""><i class="fa fa-eye"></i> {% get_hit_count for post %}
                                 </a></small>
@@ -56,7 +56,7 @@
                                         <div class="blog-box">
                                             <div class="post-media">
                                                 <a href="{{ post.get_absolute_url }}" title="">
-                                                    <img src="{{ post.image.url }}" alt="" class="img-fluid">
+                                                    <img src="{{ post.image.url }}" alt="" class="img-fluid second-slot">
                                                     <div class="hovereffect">
                                                         <span class=""></span>
                                                     </div><!-- end hover -->
@@ -68,7 +68,7 @@
                                                 <small><a href="blog-category-01.html"
                                                           title="">{{ post.author }}</a></small>
                                                 <small><a href="blog-category-01.html"
-                                                          title="">{{ post.publish }}</a></small>
+                                                          title="">{{ post.publish|date:'d F Y ' }}</a></small>
                                             </div><!-- end meta -->
                                         </div><!-- end blog-box -->
                                     </div><!-- end col -->
@@ -96,7 +96,7 @@
                                                 <div class="media">
                                                     <div class="media-body">
                                                         <h4 class="media-heading user_name">{{ comment.author|capfirst }}
-                                                            <small>{{ comment.publish|date }}</small></h4>
+                                                            <small>{{ comment.publish|date:'d F Y' }}</small></h4>
                                                         <p>{{ comment.body|linebreaks }}</p>
                                                     </div>
                                                 </div>

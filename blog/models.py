@@ -54,3 +54,19 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment by {self.author.username} on {self.post}'
+
+
+class Author(models.Model):
+    name = models.CharField(max_length=20)
+    description = models.TextField()
+    photo = models.ImageField(upload_to='author/')
+    website = models.URLField(blank=True, null=True)
+    telegram = models.URLField(blank=True, null=True)
+    linkedin = models.URLField(blank=True, null=True)
+    twitter = models.URLField(blank=True, null=True)
+    github = models.URLField(blank=True, null=True)
+    gitlab = models.URLField(blank=True, null=True)
+    instagram = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name

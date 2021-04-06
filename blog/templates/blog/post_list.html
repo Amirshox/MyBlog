@@ -9,7 +9,7 @@
             <div class="masonry-blog clearfix">
                 <div class="first-slot">
                     <div class="masonry-box post-media">
-                        <img src="{{ first_slot.image.url }}" alt="" class="img-fluid">
+                        <img src="{{ first_slot.image.url }}" alt="" class="img-fluid image">
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
@@ -24,8 +24,10 @@
                                     {% endfor %}
                                     <h4><a href="{{ first_slot.get_absolute_url }}" title="">{{ first_slot.title }}</a>
                                     </h4>
-                                    <small><a href='' title="">{{ first_slot.publish|date }}</a></small>
-                                    <small><a href="tech-author.html" title="">by {{ first_slot.author }}</a></small>
+                                    <small><a href='' title="">{{ first_slot.publish|date:'d F Y' }}</a></small>
+                                    <small><a href="{% url 'blog:authors' %}" title="">by {{ first_slot.author }}</a></small>
+                                    <small><a href="" title=""><i
+                                            class="fa fa-eye"></i> {% get_hit_count for first_slot %}</a></small>
                                 </div><!-- end meta -->
                             </div><!-- end shadow-desc -->
                         </div><!-- end shadow -->
@@ -34,7 +36,7 @@
 
                 <div class="second-slot">
                     <div class="masonry-box post-media">
-                        <img src="{{ second_slot.image.url }}" alt="" class="img-fluid">
+                        <img src="{{ second_slot.image.url }}" alt="" class="img-fluid image">
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
@@ -49,9 +51,12 @@
                                     {% endfor %}
                                     <h4><a href="{{ second_slot.get_absolute_url }}"
                                            title="">{{ second_slot.title }}</a></h4>
-                                    <small><a href="tech-single.html"
-                                              title="">{{ second_slot.publish|date }}</a></small>
-                                    <small><a href="tech-author.html" title="">by {{ second_slot.author }}</a></small>
+                                    <small><a href=""
+                                              title="">{{ second_slot.publish|date:'d F Y' }}</a></small>
+                                    <small><a href="{% url 'blog:authors' %}" title="">by {{ second_slot.author }}</a></small>
+                                    <small><a href="" title=""><i
+                                            class="fa fa-eye"></i> {% get_hit_count for second_slot %}</a></small>
+
                                 </div><!-- end meta -->
                             </div><!-- end shadow-desc -->
                         </div><!-- end shadow -->
@@ -60,7 +65,7 @@
 
                 <div class="last-slot">
                     <div class="masonry-box post-media">
-                        <img src="{{ last_slot.image.url }}" alt="" class="img-fluid">
+                        <img src="{{ last_slot.image.url }}" alt="" class="img-fluid image">
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
@@ -75,8 +80,11 @@
                                     {% endfor %}
                                     <h4><a href="{{ last_slot.get_absolute_url }}" title="">{{ last_slot.title }}</a>
                                     </h4>
-                                    <small><a href="tech-single.html" title="">{{ last_slot.publish|date }}</a></small>
-                                    <small><a href="tech-author.html" title="">by {{ last_slot.author }}</a></small>
+                                    <small><a href="" title="">{{ last_slot.publish|date:'d F Y' }}</a></small>
+                                    <small><a href="{% url 'blog:authors' %}" title="">by {{ last_slot.author }}</a></small>
+                                    <small><a href="" title=""><i
+                                            class="fa fa-eye"></i> {% get_hit_count for last_slot %}</a></small>
+
                                 </div><!-- end meta -->
                             </div><!-- end shadow-desc -->
                         </div><!-- end shadow -->
@@ -119,8 +127,8 @@
                                             </small>
                                         {% endfor %}
                                         <br>
-                                        <small><a href="#" title="">{{ post.publish|date }}</a></small>
-                                        <small><a href="#" title="">by {{ post.author }}</a></small>
+                                        <small><a href="#" title="">{{ post.publish|date:'d F Y' }}</a></small>
+                                        <small><a href="{% url 'blog:authors' %}" title="">by {{ post.author }}</a></small>
                                         <small><a href="#" title=""><i
                                                 class="fa fa-eye"></i> {% get_hit_count for post %}</a></small>
                                     </div><!-- end meta -->
@@ -134,7 +142,7 @@
 
                     <hr class="invis">
 
-                {% include 'blog/pagination.html' with page=posts %}
+                    {% include 'blog/pagination.html' with page=posts %}
                 </div><!-- end col -->
 
                 {% include 'blog/widget.html' %}
