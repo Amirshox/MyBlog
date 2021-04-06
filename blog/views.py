@@ -16,15 +16,17 @@ def post_list(request, tag_slug=None):
     object_list = Post.published.all()
     tag = None
 
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        object_list = object_list.filter(tags__in=[tag])
+        if object_list.count() < 3:
+            object_list = Post.published.all()
+
     first_slot = object_list[0]
     second_slot = object_list[1]
     last_slot = object_list[2]
 
     object_list = object_list[3:]
-
-    if tag_slug:
-        tag = get_object_or_404(Tag, slug=tag_slug)
-        object_list = object_list.filter(tags__in=[tag])
 
     paginator = Paginator(object_list, 7)  # 7 posts in each page
     page = request.GET.get('page')
