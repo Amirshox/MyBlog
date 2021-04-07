@@ -1,0 +1,1066 @@
+[
+  {
+    "model": "hitcount.hitcount",
+    "pk": 1,
+    "fields": {
+      "hits": 0,
+      "modified": "2021-04-06T08:23:29.710Z",
+      "content_type": 11,
+      "object_pk": 4
+    }
+  },
+  {
+    "model": "hitcount.hitcount",
+    "pk": 2,
+    "fields": {
+      "hits": 0,
+      "modified": "2021-04-06T08:23:29.751Z",
+      "content_type": 11,
+      "object_pk": 3
+    }
+  },
+  {
+    "model": "hitcount.hitcount",
+    "pk": 3,
+    "fields": {
+      "hits": 0,
+      "modified": "2021-04-06T08:23:29.791Z",
+      "content_type": 11,
+      "object_pk": 2
+    }
+  },
+  {
+    "model": "hitcount.hitcount",
+    "pk": 4,
+    "fields": {
+      "hits": 0,
+      "modified": "2021-04-06T08:23:29.861Z",
+      "content_type": 11,
+      "object_pk": 1
+    }
+  },
+  {
+    "model": "hitcount.hitcount",
+    "pk": 5,
+    "fields": {
+      "hits": 0,
+      "modified": "2021-04-07T16:01:09.980Z",
+      "content_type": 11,
+      "object_pk": 5
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2021-04-06T08:18:04.794Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Dasturlashni o'rganishni qanday boshlash kerak EMAS",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2021-04-06T08:19:37.513Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "Start Contributing to Python: Your First Steps",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2021-04-06T08:21:30.831Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "The Best Python Books",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2021-04-06T08:23:23.637Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "The Best Python Book",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2021-04-07T16:00:36.717Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "5",
+      "object_repr": "The k-Nearest Neighbors (kNN) Algorithm in Python",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2021-04-07T16:01:01.276Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Amirshox Muxitdinov",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add Blacklisted IP",
+      "content_type": 1,
+      "codename": "add_blacklistip"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change Blacklisted IP",
+      "content_type": 1,
+      "codename": "change_blacklistip"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete Blacklisted IP",
+      "content_type": 1,
+      "codename": "delete_blacklistip"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view Blacklisted IP",
+      "content_type": 1,
+      "codename": "view_blacklistip"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add Blacklisted User Agent",
+      "content_type": 2,
+      "codename": "add_blacklistuseragent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change Blacklisted User Agent",
+      "content_type": 2,
+      "codename": "change_blacklistuseragent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete Blacklisted User Agent",
+      "content_type": 2,
+      "codename": "delete_blacklistuseragent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view Blacklisted User Agent",
+      "content_type": 2,
+      "codename": "view_blacklistuseragent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add hit",
+      "content_type": 3,
+      "codename": "add_hit"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change hit",
+      "content_type": 3,
+      "codename": "change_hit"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete hit",
+      "content_type": 3,
+      "codename": "delete_hit"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view hit",
+      "content_type": 3,
+      "codename": "view_hit"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add hit count",
+      "content_type": 4,
+      "codename": "add_hitcount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change hit count",
+      "content_type": 4,
+      "codename": "change_hitcount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete hit count",
+      "content_type": 4,
+      "codename": "delete_hitcount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view hit count",
+      "content_type": 4,
+      "codename": "view_hitcount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 5,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 5,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 5,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 5,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 6,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 6,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 6,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 6,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 7,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 7,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 7,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 7,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 8,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 8,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 8,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 8,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 9,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 9,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 9,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 9,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 10,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 10,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 10,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 10,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add post",
+      "content_type": 11,
+      "codename": "add_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change post",
+      "content_type": 11,
+      "codename": "change_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete post",
+      "content_type": 11,
+      "codename": "delete_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view post",
+      "content_type": 11,
+      "codename": "view_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add comment",
+      "content_type": 12,
+      "codename": "add_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change comment",
+      "content_type": 12,
+      "codename": "change_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete comment",
+      "content_type": 12,
+      "codename": "delete_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view comment",
+      "content_type": 12,
+      "codename": "view_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add author",
+      "content_type": 13,
+      "codename": "add_author"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change author",
+      "content_type": 13,
+      "codename": "change_author"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete author",
+      "content_type": 13,
+      "codename": "delete_author"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view author",
+      "content_type": 13,
+      "codename": "view_author"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add tag",
+      "content_type": 14,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change tag",
+      "content_type": 14,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete tag",
+      "content_type": 14,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view tag",
+      "content_type": 14,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add tagged item",
+      "content_type": 15,
+      "codename": "add_taggeditem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change tagged item",
+      "content_type": 15,
+      "codename": "change_taggeditem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete tagged item",
+      "content_type": 15,
+      "codename": "delete_taggeditem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view tagged item",
+      "content_type": 15,
+      "codename": "view_taggeditem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add site",
+      "content_type": 16,
+      "codename": "add_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change site",
+      "content_type": 16,
+      "codename": "change_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete site",
+      "content_type": 16,
+      "codename": "delete_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view site",
+      "content_type": 16,
+      "codename": "view_site"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$cBkEIrTnVrHw$V9hXtx+1REpHFu467L1ONBGscbnYIW4TOgcM6p57OUo=",
+      "last_login": "2021-04-07T15:59:38.460Z",
+      "is_superuser": true,
+      "username": "amirshokh",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-04-06T08:12:14.635Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "hitcount",
+      "model": "blacklistip"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "hitcount",
+      "model": "blacklistuseragent"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "hitcount",
+      "model": "hit"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "hitcount",
+      "model": "hitcount"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "blog",
+      "model": "post"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "blog",
+      "model": "comment"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "blog",
+      "model": "author"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "taggit",
+      "model": "tag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "taggit",
+      "model": "taggeditem"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "sites",
+      "model": "site"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "9j8oq3pyndf3ni3d9t9ffb3l9lompfjt",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSE8h-LSvd9ABhikaiAp7cr479qkC93ec859sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuDAF9ISEMTWB29lRK8coWSR0yGrEAnrFHFqUQTFm1M1igoQdYAUbH3B8zuN6I:1lUAag:TC7f5le7dgZlzasfoOFWeJN_Q1zV5x88r4UGxAcYp_o",
+      "expire_date": "2021-04-21T15:59:38.532Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ck5p0n2t10tqmf0diqttn3tz6l2uil00",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSE8h-LSvd9ABhikaiAp7cr479qkC93ec859sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuDAF9ISEMTWB29lRK8coWSR0yGrEAnrFHFqUQTFm1M1igoQdYAUbH3B8zuN6I:1lTgot:TnJZ1p4cUNHzEOhrt9BR_MC--w31ej3a6d1CbH--HiY",
+      "expire_date": "2021-04-20T08:12:19.838Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+      "title": "Dasturlashni o'rganishni qanday boshlash kerak EMAS",
+      "slug": "dasturlashni-organishni-qanday-boshlash-kerak-emas",
+      "author": 1,
+      "body": "<p>Решил поделиться своим опытом &laquo;успешного&raquo; изучения языка(ов) программирования.<br />\r\n<br />\r\nНе сказать, что в IT-индустрии я полный профан, однако мой план обучения &laquo;стать IT developer-ом&raquo; &mdash; с треском пошел по швам.<br />\r\n<br />\r\nНемного предыстории.<br />\r\n<br />\r\nСразу скажу, что целенаправленного обучения по компьютерным наукам я не проходил. Да и специализация в образовании у меня далеко не техническая. Работал с 2005г. по 2012г. в различных компаниях, и мелких и крупных, непосредственно связанных с IT-индустрией. Научился всему понемногу: сис. администрированию Windows (даже MCP, MCSA успел получить), немного поюзал VMware (VCP тоже в копилке), дополнительно изучил разную кучу программ, которые сис. админы как правило используют в своей ежедневной работе.<br />\r\nПопробовал себя в корпоративных продажах, кстати, неплохо получалось. Успел поработать немного и у дистрибьютора ПО, а также в компаниях-интеграторах, неплохо разобрался в политиках лицензирования ПО. Планировал стать Project manager-ом, даже начал изучать PMBOK, тайм-менеджмент, различные международные стандарты, типа ISO, Tier, и даже замахнулся на PCI DSS.<br />\r\n<img alt=\"\" src=\"https://files.realpython.com/media/Office-Hours_Watermarked.8cb43dd651db.jpg\" style=\"height:225px; width:400px\" /><br />\r\nНо в определенный момент перегорел, и все бросил. Ушел так сказать в отпуск на 8 лет.<br />\r\nПосле долгого анализа, все-таки созрел и осознал, что пора валить на запад, и желательно поближе к кремниевой долине, т.к. с английским более менее нормально, можно подтянуться до необходимого уровня.<br />\r\n<br />\r\nЕжу понятно что меня там никто не ждет, а сис. админов, продажников и project менеджеров там и своих хватает. Тем более без знания ситуации на локальном рынке, сразу работу найти будет, ну как минимум проблематично.</p>",
+      "image": "posts/2021/04/06/Screenshot_from_2021-04-02_18-08-56.png",
+      "publish": "2021-04-06T08:14:27Z",
+      "status": "published"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+      "title": "Start Contributing to Python: Your First Steps",
+      "slug": "start-contributing-python-your-first-steps",
+      "author": 1,
+      "body": "<p>If you want to start&nbsp;<strong>contributing</strong>&nbsp;to open source, then&nbsp;<a href=\"https://github.com/python\">Python</a>&nbsp;is a great project to start with. You&rsquo;ll not only be making your mark on one of the biggest projects out there, but you&rsquo;ll also be doing it as part of a vibrant and welcoming&nbsp;<strong>community</strong>. Open source projects rely on contributions from volunteers like you to grow and evolve, so you&rsquo;ll be making a real difference to the future of open-source software.</p>\r\n\r\n<p>On top of that, contributing to&nbsp;<strong>open source</strong>&nbsp;is a great way to learn and build your skills, so don&rsquo;t worry if you don&rsquo;t feel like an expert. There may be a way to contribute that&rsquo;s perfect for you, even if you don&rsquo;t know about it yet. It all starts with your first contribution!</p>\r\n\r\n<p><strong>By the end of this tutorial, you&rsquo;ll know:</strong></p>\r\n\r\n<ul>\r\n\t<li>How you can contribute in a way that matches your&nbsp;<strong>skills</strong>&nbsp;and&nbsp;<strong>interests</strong></li>\r\n\t<li>What&nbsp;<strong>resources</strong>&nbsp;and&nbsp;<strong>tools</strong>&nbsp;you can use to help you contribute confidently</li>\r\n\t<li>Where you can find ideas for fixes to propose in&nbsp;<strong>your first contribution</strong></li>\r\n</ul>",
+      "image": "posts/2021/04/06/Screenshot_from_2021-02-28_17-29-59.png",
+      "publish": "2021-04-06T08:18:13Z",
+      "status": "published"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+      "title": "The Best Python Books",
+      "slug": "best-python-books",
+      "author": 1,
+      "body": "<h2>Best Books for Learning Python</h2>\r\n\r\n<p>If you are new to Python, you are likely in one of the following two situations:</p>\r\n\r\n<ol>\r\n\t<li>You are new to programming and want to start by learning Python.</li>\r\n\t<li>You have a reasonable amount of programming experience in another language and now want to learn Python.</li>\r\n</ol>\r\n\r\n<p>This section focuses on the first of these two scenarios, with reviews of the books we consider to be the best Python programming books for readers who are new to both programming and Python. Accordingly, these books require no previous programming experience. They start from the absolute basics and teach both general programming concepts as well as how they apply to Python.</p>\r\n\r\n<p><strong>Note:</strong>&nbsp;If you&rsquo;re looking for&nbsp;<strong>the best Python books for experienced programmers</strong>, consider the following selection of books with full reviews in the&nbsp;<a href=\"https://realpython.com/best-python-books/#best-books-for-learning-python\">intro</a>&nbsp;and&nbsp;<a href=\"https://realpython.com/best-python-books/#best-intermediate-and-advanced-python-books\">advanced</a>&nbsp;sections:</p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://realpython.com/best-python-books/#think-python\"><em>Think Python</em></a>: The most basic of this list,&nbsp;<em>Think Python</em>&nbsp;provides a comprehensive Python reference.</li>\r\n\t<li><a href=\"https://realpython.com/best-python-books/#fluent-python\"><em>Fluent Python</em></a>: While Python&rsquo;s simplicity lets you quickly start coding, this book teaches you how to write idiomatic Python code, while going into several deep topics of the language.</li>\r\n\t<li><a href=\"https://realpython.com/best-python-books/#effective-python-59-ways-to-write-better-python\"><em>Effective Python: 59 Ways to Write Better Python</em></a>: This relatively short book is a collection of 59 articles that, similarly to&nbsp;<em>Fluent Python</em>, focus on teaching you how to write truly Pythonic code.</li>\r\n\t<li><a href=\"https://realpython.com/best-python-books/#python-cookbook\"><em>Python Cookbook</em></a>: As a cookbook, this will be a good reference on how to use Python to complete tasks you have done in another language.</li>\r\n</ul>\r\n\r\n<p>Alternatively, you may even prefer to go directly to&nbsp;<a href=\"https://docs.python.org/3/tutorial/index.html\">the official Python Tutorial</a>, a well-written and thorough resource.</p>\r\n\r\n<h3>Python Crash Course</h3>\r\n\r\n<p>Eric Matthes&nbsp;<em>(No Starch Press, 2016)</em></p>\r\n\r\n<p><a href=\"https://realpython.com/asins/1593276036/\" target=\"_blank\"><img alt=\"&quot;Python Crash Course&quot; Book Cover\" src=\"https://files.realpython.com/media/python-crash-course-cover.56540af24538.jpg\" style=\"height:500px; width:378px\" /></a></p>\r\n\r\n<p>It does what it says on the tin, and it does it really well. The book starts out with a walkthrough of the basic Python elements and data structures, working through variables, strings, numbers, lists, and tuples, outlining how you work with each of them.</p>\r\n\r\n<p>Next,&nbsp;<code>if</code>&nbsp;statements and logical tests are covered, followed by a dive into dictionaries.</p>\r\n\r\n<p>After that, the book covers user input,&nbsp;<a href=\"https://realpython.com/python-while-loop/\"><code>while</code>&nbsp;loops</a>, functions, classes, and file handling, as well as code testing and debugging.</p>\r\n\r\n<p>That&rsquo;s just the first half of the book! In the second half, you work on three major projects, creating some clever, fun applications.</p>\r\n\r\n<p>The first project is an Alien Invasion game, essentially Space Invaders, developed using the&nbsp;<code>pygame</code>&nbsp;package. You design a ship (using classes), then program how to pilot it and make it fire bullets. Then, you design several classes of aliens, make the alien fleet move, and make it possible to shoot them down. Finally, you add a scoreboard and a list of high scores to complete the game.</p>\r\n\r\n<p>After that, the next project covers data visualization with&nbsp;<code>matplotlib</code>, random walks, rolling dice, and a little bit of statistical analysis, creating graphs and charts with the&nbsp;<code>pygal</code>&nbsp;package. You learn how to download data in a variety of formats, import it into Python, and visualize the results, as well as how to interact with web APIs, retrieving and visualizing data from GitHub and HackerNews.</p>\r\n\r\n<p>The third project walks you through the creation of a complete web application using Django to set up a Learning Log to track what users have been studying. It covers how to install Django, set up a project, design your models, create an admin interface, set up user accounts, manage access controls on a per-user basis, style your entire app with Bootstrap, and then finally deploy it to Heroku.</p>\r\n\r\n<p>This book is well written and nicely organized. It presents a large number of useful exercises as well as three challenging and entertaining projects that make up the second half of the book.&nbsp;<em>(Reviewed by David Schlesinger.)</em></p>",
+      "image": "posts/2021/04/06/Screenshot_from_2021-02-28_17-29-59_t40wchZ.png",
+      "publish": "2021-04-06T08:19:37Z",
+      "status": "published"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+      "title": "The Best Python Book",
+      "slug": "best-python-book",
+      "author": 1,
+      "body": "<h3>Head-First Python, 2nd edition</h3>\r\n\r\n<p>Paul Barry&nbsp;<em>(O&rsquo;Reilly, 2016)</em></p>\r\n\r\n<p><a href=\"https://realpython.com/asins/1491919531/\" target=\"_blank\"><img alt=\"&quot;Head-First Python&quot; Book Cover\" src=\"https://files.realpython.com/media/head-first-python-cover.3869ed7d3547.jpg\" style=\"height:500px; width:435px\" /></a></p>\r\n\r\n<p>I really like the&nbsp;<em>Head-First</em>&nbsp;series of books, although they&rsquo;re admittedly lighter weight in overall content than many of the other recommendations in this section. The trade-off is the that this approach makes the book more user-friendly.</p>\r\n\r\n<p>If you&rsquo;re the kind of person who likes to learn things one small, fairly self-contained chunk at a time, and you want to have lots of concrete examples and illustrations of the concepts involved, then the&nbsp;<em>Head-First</em>&nbsp;series is for you. The publisher&rsquo;s website has the following to say about their approach:</p>",
+      "image": "posts/2021/04/06/Screenshot_from_2021-04-02_18-08-56_zGqZBOF.png",
+      "publish": "2021-04-06T08:21:33Z",
+      "status": "published"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+      "title": "The k-Nearest Neighbors (kNN) Algorithm in Python",
+      "slug": "k-nearest-neighbors-knn-algorithm-python",
+      "author": 1,
+      "body": "<p>In this tutorial, you&rsquo;ll get a thorough introduction to the k-Nearest Neighbors (kNN) algorithm in Python. The kNN algorithm is one of the most famous&nbsp;<a href=\"https://realpython.com/learning-paths/machine-learning-python/\">machine learning</a>&nbsp;algorithms and an absolute must-have in your machine learning toolbox. Python is the go-to programming language for machine learning, so what better way to discover kNN than with Python&rsquo;s famous packages&nbsp;<a href=\"https://realpython.com/numpy-tutorial/\">NumPy</a>&nbsp;and&nbsp;<a href=\"https://scikit-learn.org/stable/\">scikit-learn</a>!</p>\r\n\r\n<p>Below, you&rsquo;ll explore the kNN algorithm both in theory and in practice. While many tutorials skip the theoretical part and focus only on the use of libraries, you don&rsquo;t want to be dependent on automated packages for your machine learning. It&rsquo;s important to learn about the mechanics of machine learning algorithms to understand their potential and limitations.</p>\r\n\r\n<p>At the same time, it&rsquo;s essential to understand how to use an algorithm in practice. With that in mind, in the second part of this tutorial, you&rsquo;ll focus on the use of kNN in the Python library scikit-learn, with advanced tips for pushing performance to the max.</p>\r\n\r\n<p><strong>In this tutorial, you&rsquo;ll learn how to:</strong></p>\r\n\r\n<ul>\r\n\t<li>Explain the&nbsp;<strong>kNN algorithm</strong>&nbsp;both intuitively and mathematically</li>\r\n\t<li>Implement kNN in Python&nbsp;<strong>from scratch</strong>&nbsp;using&nbsp;<strong>NumPy</strong></li>\r\n\t<li>Use kNN in Python with&nbsp;<strong>scikit-learn</strong></li>\r\n\t<li>Tune&nbsp;<strong>hyperparameters</strong>&nbsp;of kNN using&nbsp;<code>GridSearchCV</code></li>\r\n\t<li>Add&nbsp;<strong>bagging</strong>&nbsp;to kNN for better performance</li>\r\n</ul>",
+      "image": "posts/2021/04/07/parnik.jpg",
+      "publish": "2021-04-07T15:59:48Z",
+      "status": "published"
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 1,
+    "fields": {
+      "post": 1,
+      "author": 1,
+      "body": "Maqolaga gap yuq",
+      "publish": "2021-04-06T08:24:07.163Z",
+      "active": true
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 2,
+    "fields": {
+      "post": 3,
+      "author": 1,
+      "body": "salom",
+      "publish": "2021-04-06T08:26:07.088Z",
+      "active": true
+    }
+  },
+  {
+    "model": "blog.author",
+    "pk": 1,
+    "fields": {
+      "name": "Amirshox Muxitdinov",
+      "description": "asasdas  asd asd  asd asd  asd",
+      "photo": "author/leonardo.jpeg",
+      "website": null,
+      "telegram": null,
+      "linkedin": null,
+      "twitter": null,
+      "github": null,
+      "gitlab": null,
+      "instagram": null
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": {
+      "name": "programming",
+      "slug": "programming"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": {
+      "name": "python",
+      "slug": "python"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 3,
+    "fields": {
+      "name": "book",
+      "slug": "book"
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 1,
+    "fields": {
+      "tag": 1,
+      "content_type": 11,
+      "object_id": 1
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 2,
+    "fields": {
+      "tag": 2,
+      "content_type": 11,
+      "object_id": 2
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 3,
+    "fields": {
+      "tag": 2,
+      "content_type": 11,
+      "object_id": 3
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 4,
+    "fields": {
+      "tag": 3,
+      "content_type": 11,
+      "object_id": 3
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 5,
+    "fields": {
+      "tag": 2,
+      "content_type": 11,
+      "object_id": 4
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 6,
+    "fields": {
+      "tag": 3,
+      "content_type": 11,
+      "object_id": 4
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 7,
+    "fields": {
+      "tag": 1,
+      "content_type": 11,
+      "object_id": 5
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+      "domain": "example.com",
+      "name": "example.com"
+    }
+  }
+]
