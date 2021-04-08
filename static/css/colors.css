@@ -11,28 +11,13 @@
 /* COLORS 
 **************************************/
 
-.authorbox p a,
-.pp a,
-.sitemap-wrapper small,
-.fa-user-circle-o,
-.footer h5:hover,
-a:hover,
-a:focus,
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus,
-.navbar-inverse .navbar-nav .active > .nav-link,
-.navbar-inverse .navbar-nav .nav-link.active,
-.navbar-inverse .navbar-nav .nav-link.open,
-.navbar-inverse .navbar-nav .open > .nav-link {
-    color: #3197d6 !important;
-}
 
 .dmtop,
 .search-form .btn:hover,
 .search-form .btn:focus,
 .search-form .btn {
     color: #ffffff !important;
-    background-color: #3197d6 !important;
+    background-color: #222 !important;
 }
 
 .tag-cloud-single span,
@@ -42,7 +27,7 @@ a:focus,
 .btn:focus,
 .navbar-inverse .navbar-toggler {
     color: #ffffff !important;
-    background-color: #3197d6;
+    background-color: #222;
 }
 
 .blockquote {

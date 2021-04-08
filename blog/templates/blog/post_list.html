@@ -9,7 +9,9 @@
             <div class="masonry-blog clearfix">
                 <div class="first-slot">
                     <div class="masonry-box post-media">
-                        <img src="{{ first_slot.image.url }}" alt="" class="img-fluid image">
+                        <div class="image">
+                            <img src="{{ first_slot.image.url }}" alt="" class="img-fluid image">
+                        </div>
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
@@ -36,7 +38,9 @@
 
                 <div class="second-slot">
                     <div class="masonry-box post-media">
-                        <img src="{{ second_slot.image.url }}" alt="" class="img-fluid image">
+                        <div class="image">
+                            <img src="{{ second_slot.image.url }}" alt="" class="img-fluid image">
+                        </div>
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
@@ -65,7 +69,9 @@
 
                 <div class="last-slot">
                     <div class="masonry-box post-media">
-                        <img src="{{ last_slot.image.url }}" alt="" class="img-fluid image">
+                        <div class="image">
+                            <img src="{{ last_slot.image.url }}" alt="" class="img-fluid image">
+                        </div>
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
@@ -109,7 +115,7 @@
                                 <div class="blog-box row">
                                     <div class="col-md-4">
                                         <div class="post-media">
-                                            <a href="{{ post.get_absolute_url }}" title="">
+                                            <a class="blog-style" href="{{ post.get_absolute_url }}" title="">
                                                 <img src="{{ post.image.url }}" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>

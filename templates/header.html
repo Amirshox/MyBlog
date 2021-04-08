@@ -6,7 +6,7 @@
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <p><strong>Progercha</strong></p>
+            <p class="text-white progercha"><strong>Progercha</strong></p>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -26,10 +26,10 @@
                            aria-label="Search">
                     <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
                 </form>
-                <div class="" id="navbarNavAltMarkup">
+                <div class="welcome-user" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         {% if user.is_authenticated %}
-                            <p>Welcome {{ user.username|capfirst }}</p>
+                            <p class="nav-link">Welcome {{ user.username|capfirst }}</p>
                             <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                         {% else %}
                             <a class="nav-item nav-link active" href="{% url 'login' %}">Sign In</a>
