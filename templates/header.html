@@ -6,19 +6,17 @@
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="progercha-div">
-                <p class="text-white  progercha">Progercha</p>
-            </div>
+
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <p class="nav-link progercha" href="">PROGERCHA</>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'blog:post_list' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'blog:authors' %}">Authors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog:authors' %}">Resume</a>
                     </li>
                 </ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -31,6 +29,7 @@
                         {% if user.is_authenticated %}
                             <p class="nav-link">Welcome {{ user.username|capfirst }}</p>
                             <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                            <a target="_blank" href="https://t.me/progercha"><i class="fab fa-2x text-white fa-telegram"></i></a>
                         {% else %}
                             <a class="nav-item nav-link active" href="{% url 'login' %}">Sign In</a>
                             <a class="nav-item nav-link" href="{% url 'register' %}">Sign Up</a>

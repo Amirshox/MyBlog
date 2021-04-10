@@ -145,6 +145,14 @@
     color: #fff;
     margin-bottom: 0;
 }
-.progercha {;
+.progercha {
     font-size: 20px;
+}
+.fab {
+    padding-top: 5px;
+}
+.social-media-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

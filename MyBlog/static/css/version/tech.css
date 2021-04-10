@@ -56,6 +56,7 @@ h5 {
 .navbar-inverse .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link:focus {
     opacity: 0.8;
+    font-size: 15px;
 }
 
 .dropdown-toggle::after {
