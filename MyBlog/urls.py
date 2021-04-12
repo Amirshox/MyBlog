@@ -23,6 +23,7 @@ urlpatterns = [
     path('blog/', include('blog.urls', namespace='blog')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', include('accounts.urls')),
+    path('resume/', include('resume.urls')),
 ]
 
 if settings.DEBUG:

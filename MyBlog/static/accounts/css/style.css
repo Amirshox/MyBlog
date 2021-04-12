@@ -2,14 +2,14 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #cdedfa !important;
+    background: #292b2c !important;
 }
 
 .user_card {
     width: 350px;
     margin-top: auto;
     margin-bottom: auto;
-    background: #74cfbf;
+    background: #00473b;
     position: relative;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ body, html {
 
 .login_btn {
     width: 100%;
-    background: #33ccff !important;
+    background: #292b2c !important;
     color: white !important;
 }
 

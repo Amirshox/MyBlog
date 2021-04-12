@@ -1,15 +1,20 @@
-from django.db.models import Count
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404, redirect
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.core.mail import send_mail
-from django.views.generic import ListView
-from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
+import telegram
+from telegram import ParseMode
 from django.contrib.postgres.search import TrigramSimilarity
-from .models import Post, Comment, Author
-from .forms import EmailPostForm, CommentForm, SearchForm
-from taggit.models import Tag
+from django.core.mail import send_mail
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Count
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
+from taggit.models import Tag
+from django.conf import settings
+from django.template.loader import render_to_string
+
+from .forms import EmailPostForm, CommentForm, SearchForm
+from .models import Post, Author
 
 
 def post_list(request, tag_slug=None):
@@ -120,3 +125,13 @@ def author(request):
     authors = Author.objects.all()
     context = {'authors': authors}
     return render(request, 'blog/author.html', context=context)
+
+
+@receiver(post_save, sender=Post)
+def post_event_on_telegram(sender, instance, created, **kwargs):
+    if created:
+        message_html = render_to_string('blog/telegram_message.html', {'post': instance})
+        telegram_settings = settings.TELEGRAM
+        bot = telegram.Bot(token=telegram_settings['bot_token'])
+        bot.send_photo(chat_id="@%s" % telegram_settings['channel_name'], photo=instance.image,
+                       caption=message_html, parse_mode=ParseMode.HTML)

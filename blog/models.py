@@ -1,11 +1,15 @@
+import telegram
 from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
+from django.template.loader import render_to_string
 from django.utils import timezone
 from django.urls import reverse
 from django.contrib.auth.models import User
 from hitcount.models import HitCount
 from taggit.managers import TaggableManager
 from ckeditor.fields import RichTextField
+
+from django.conf import settings
 
 
 class PublishedManager(models.Manager):
