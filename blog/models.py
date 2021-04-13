@@ -1,15 +1,12 @@
-import telegram
+from django.contrib.auth.models import User
 from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
-from django.template.loader import render_to_string
-from django.utils import timezone
 from django.urls import reverse
-from django.contrib.auth.models import User
+from django.utils import timezone
 from hitcount.models import HitCount
 from taggit.managers import TaggableManager
-from ckeditor.fields import RichTextField
-
-from django.conf import settings
+from tinymce.models import HTMLField
+from sorl.thumbnail import ImageField
 
 
 class PublishedManager(models.Manager):
@@ -25,8 +22,8 @@ class Post(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
-    body = RichTextField(verbose_name='Blog_Content')
-    image = models.ImageField(upload_to='posts/%Y/%m/%d')
+    body = HTMLField(verbose_name='Content')
+    image = ImageField(upload_to='posts/%Y/%m/%d')
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
     hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
