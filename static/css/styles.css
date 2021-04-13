@@ -126,7 +126,8 @@
     object-fit: cover;
 }
 .popular-style img {
-    height: 80px;
+    object-fit: cover;
+    height: 60px;
 }
 .single-post-media {
     height: 800px;
@@ -136,7 +137,7 @@
 }
 
 .may-also-style {
-    height: 400px;
+    height: 200px;
 }
 .may-also-style img {
     object-fit: cover;
