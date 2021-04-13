@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load thumbnail %}
 
 
 {% block content %}
@@ -30,7 +31,11 @@
 
                                 <div class="row">
                                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                                        <img src="{{ author.photo.url }}" alt="" class="img-fluid rounded-circle">
+                                        {% thumbnail author.photo "100x130" crop="center" as image %}
+                                            <img src="{{ image.url }}" width="{{ image.width }}"
+                                                 height="{{ image.height }}" alt=""
+                                                 class="img-fluid rounded-circle">
+                                        {% endthumbnail %}
                                     </div><!-- end col -->
 
                                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
@@ -53,27 +58,30 @@
                                                    data-placement="bottom"
                                                    title="Github"><i class="fa fa-github"></i></a>
                                             {% endif %}
-                                        {% if author.gitlab %}
-                                            <a href="{{ author.gitlab }}" data-toggle="tooltip" data-placement="bottom"
-                                               title="Gitlab"><i
-                                                    class="fa fa-gitlab"></i></a>
-                                        {% endif %}
-                                        {% if author.twitter %}
-                                            <a href="{{ author.twitter }}" data-toggle="tooltip" data-placement="bottom"
-                                               title="Twitter"><i
-                                                    class="fa fa-twitter"></i></a>
-                                        {% endif %}
-                                        {% if author.instagram %}
-                                            <a href="{{ author.instagram }}" data-toggle="tooltip"
-                                               data-placement="bottom"
-                                               title="Instagram"><i
-                                                    class="fa fa-instagram"></i></a>
-                                        {% endif %}
-                                        {% if author.website %}
-                                            <a href="{{ author.website }}" data-toggle="tooltip" data-placement="bottom"
-                                               title="Website"><i
-                                                    class="fa fa-link"></i></a>
-                                        {% endif %}
+                                            {% if author.gitlab %}
+                                                <a href="{{ author.gitlab }}" data-toggle="tooltip"
+                                                   data-placement="bottom"
+                                                   title="Gitlab"><i
+                                                        class="fa fa-gitlab"></i></a>
+                                            {% endif %}
+                                            {% if author.twitter %}
+                                                <a href="{{ author.twitter }}" data-toggle="tooltip"
+                                                   data-placement="bottom"
+                                                   title="Twitter"><i
+                                                        class="fa fa-twitter"></i></a>
+                                            {% endif %}
+                                            {% if author.instagram %}
+                                                <a href="{{ author.instagram }}" data-toggle="tooltip"
+                                                   data-placement="bottom"
+                                                   title="Instagram"><i
+                                                        class="fa fa-instagram"></i></a>
+                                            {% endif %}
+                                            {% if author.website %}
+                                                <a href="{{ author.website }}" data-toggle="tooltip"
+                                                   data-placement="bottom"
+                                                   title="Website"><i
+                                                        class="fa fa-link"></i></a>
+                                            {% endif %}
                                         </div><!-- end social -->
 
                                     </div><!-- end col -->

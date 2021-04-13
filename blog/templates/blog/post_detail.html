@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load thumbnail %}
 {% load blog_tags %}
 {% load hitcount_tags %}
 {% load widget_tweaks %}
@@ -40,7 +41,10 @@
                         </div><!-- end title -->
 
                         <div class="single-post-media">
-                            <img src="{{ post.image.url }}" alt="" class="img-fluid">
+                            {% thumbnail post.image "690x450" crop="center" as image %}
+                                <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" alt=""
+                                     class="img-fluid">
+                            {% endthumbnail %}
                         </div><!-- end media -->
 
                         <div class="blog-content">
@@ -61,8 +65,11 @@
                                             <div class="post-media">
                                                 <a href="{{ post.get_absolute_url }}" title="">
                                                     <div class="may-also-style">
-                                                        <img src="{{ post.image.url }}" alt=""
-                                                             class="img-fluid second-slot">
+                                                        {% thumbnail post.image "360x200" crop="center" as image %}
+                                                            <img src="{{ image.url }}" width="{{ image.width }}"
+                                                                 height="{{ image.height }}" alt=""
+                                                                 class="img-fluid">
+                                                        {% endthumbnail %}
                                                     </div>
                                                     <div class="hovereffect">
                                                         <span class=""></span>

@@ -1,3 +1,4 @@
+{% load thumbnail %}
 {% load blog_tags %}
 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
     <div class="sidebar">
@@ -10,16 +11,20 @@
             <div class="blog-list-widget">
                 <div class="list-group">
                     {% for post in most_viewed_posts %}
-                    <a href="{{ post.get_absolute_url }}"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="w-100 justify-content-between">
-                            <div class="popular-style">
-                                <img src="{{ post.image.url }}" alt="" class="img-fluid float-left">
+                        <a href="{{ post.get_absolute_url }}"
+                           class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="w-100 justify-content-between">
+                                <div class="popular-style">
+                                    {% thumbnail post.image "80x60" crop="center" as image %}
+                                        <img src="{{ image.url }}" width="{{ image.width }}"
+                                             height="{{ image.height }}" alt=""
+                                             class="img-fluid float-left">
+                                    {% endthumbnail %}
+                                </div>
+                                <h5 class="mb-1">{{ post.title|truncatechars:25 }}</h5>
+                                <small>{{ post.publish|date:'d F Y' }}</small>
                             </div>
-                            <h5 class="mb-1">{{ post.title|truncatechars:25 }}</h5>
-                            <small>{{ post.publish|date:'d F Y' }}</small>
-                        </div>
-                    </a>
+                        </a>
                     {% endfor %}
                 </div>
             </div><!-- end blog-list -->
@@ -31,16 +36,20 @@
             <div class="blog-list-widget">
                 <div class="list-group">
                     {% for post in most_commented_posts %}
-                    <a href="{{ post.get_absolute_url }}"
-                       class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="w-100 justify-content-between">
-                            <div class="popular-style">
-                                <img src="{{ post.image.url }}" alt="" class="img-fluid float-left">
+                        <a href="{{ post.get_absolute_url }}"
+                           class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="w-100 justify-content-between">
+                                <div class="popular-style">
+                                    {% thumbnail post.image "80x60" crop="center" as image %}
+                                        <img src="{{ image.url }}" width="{{ image.width }}"
+                                             height="{{ image.height }}" alt=""
+                                             class="img-fluid float-left">
+                                    {% endthumbnail %}
+                                </div>
+                                <h5 class="mb-1">{{ post.title|truncatechars:25 }}</h5>
+                                <small>{{ post.publish|date:'d F Y' }}</small>
                             </div>
-                            <h5 class="mb-1">{{ post.title|truncatechars:25 }}</h5>
-                            <small>{{ post.publish|date:'d F Y' }}</small>
-                        </div>
-                    </a>
+                        </a>
                     {% endfor %}
                 </div>
             </div><!-- end blog-list -->

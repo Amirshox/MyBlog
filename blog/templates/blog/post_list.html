@@ -11,7 +11,7 @@
                 <div class="first-slot">
                     <div class="masonry-box post-media">
                         <div class="image">
-                            {% thumbnail first_slot.image "870x500" crop="center" as image %}
+                            {% thumbnail first_slot.image "490x500" crop="center" as image %}
                                 <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" alt=""
                                      class="img-fluid image">
                             {% endthumbnail %}
@@ -45,7 +45,7 @@
                 <div class="second-slot">
                     <div class="masonry-box post-media">
                         <div class="image">
-                            {% thumbnail second_slot.image "435x500" crop="center" as image %}
+                            {% thumbnail second_slot.image "240x500" crop="center" as image %}
                                 <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" alt=""
                                      class="img-fluid image">
                             {% endthumbnail %}
@@ -80,7 +80,7 @@
                 <div class="last-slot">
                     <div class="masonry-box post-media">
                         <div class="image">
-                            {% thumbnail last_slot.image "435x500" crop="center" as image %}
+                            {% thumbnail last_slot.image "240x500" crop="center" as image %}
                                 <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" alt=""
                                      class="img-fluid image">
                             {% endthumbnail %}
