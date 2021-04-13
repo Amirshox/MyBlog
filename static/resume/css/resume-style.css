@@ -55,21 +55,13 @@ a:hover {
 .education {
     margin-top: 40px;
 }
+
+.project img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+}
 .image a {
     font-size: 20px;
     letter-spacing: 3px;
-}
-.mySlides {
-    display:none;
-    height: 600px;
-    object-fit: cover;
-    width: 100%;
-}
-.w3-left, .w3-right, .w3-badge {
-    cursor:pointer
-}
-.w3-badge {
-    height:13px;
-    width:13px;
-    padding:0
 }
