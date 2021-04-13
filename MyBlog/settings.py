@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'resume.apps.ResumeConfig',
     'taggit',
-    'ckeditor',
     'tinymce',
     'django.contrib.sites',
     'widget_tweaks',
@@ -154,7 +153,6 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-
 TINYMCE_DEFAULT_CONFIG = {
     "plugins": "image,advlist,autolink,lists,link,image,charmap,print,preview,anchor,"
                "searchreplace,visualblocks,code,fullscreen,insertdatetime,media,table,paste,",
@@ -181,3 +179,10 @@ TELEGRAM = {
 INTERNAL_IPS = ("127.0.0.1",)
 
 THUMBNAIL_DEBUG = True
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
