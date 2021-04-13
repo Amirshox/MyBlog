@@ -31,8 +31,8 @@
                             <h3>{{ post.title }}</h3>
 
                             <div class="blog-meta big-meta">
-                                <small><a href="tech-single.html" title="">{{ post.publish|date:'d F Y' }}</a></small>
-                                <small><a href="tech-author.html" title="">by {{ post.author }}</a></small>
+                                <small><a href="#" title="">{{ post.publish|date:'d F Y' }}</a></small>
+                                <small><a href="{% url 'blog:authors' %}" title="">by {{ post.author }}</a></small>
                                 <small><a href="#" title=""><i class="fa fa-eye"></i> {% get_hit_count for post %}
                                 </a></small>
                             </div><!-- end meta -->
@@ -61,7 +61,8 @@
                                             <div class="post-media">
                                                 <a href="{{ post.get_absolute_url }}" title="">
                                                     <div class="may-also-style">
-                                                        <img src="{{ post.image.url }}" alt="" class="img-fluid second-slot">
+                                                        <img src="{{ post.image.url }}" alt=""
+                                                             class="img-fluid second-slot">
                                                     </div>
                                                     <div class="hovereffect">
                                                         <span class=""></span>
@@ -71,9 +72,9 @@
                                             <div class="blog-meta">
                                                 <h4><a href="{{ post.get_absolute_url }}" title="">{{ post.title }}</a>
                                                 </h4>
-                                                <small><a href="blog-category-01.html"
+                                                <small><a href="{% url 'blog:authors' %}"
                                                           title="">{{ post.author }}</a></small>
-                                                <small><a href="blog-category-01.html"
+                                                <small><a href="#"
                                                           title="">{{ post.publish|date:'d F Y ' }}</a></small>
                                             </div><!-- end meta -->
                                         </div><!-- end blog-box -->

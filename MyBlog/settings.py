@@ -30,6 +30,7 @@ SITE_ID = 1
 
 # Application definition
 
+
 INSTALLED_APPS = [
     'hitcount',
     'django.contrib.admin',
@@ -43,8 +44,11 @@ INSTALLED_APPS = [
     'resume.apps.ResumeConfig',
     'taggit',
     'ckeditor',
+    'tinymce',
     'django.contrib.sites',
     'widget_tweaks',
+    'debug_toolbar',
+    'sorl.thumbnail',
     # 'django.contrib.sitemaps',
     # 'django.contrib.postgres',
 ]
@@ -57,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'MyBlog.urls'
@@ -89,21 +94,21 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 
-#     'default': {
-#
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#
-#         'NAME': 'progercha',
-#
-#         'USER': 'amirshokh',
-#
-#         'PASSWORD': '4748998',
-#
-#         'HOST': 'localhost',
-#
-#         'PORT': '5432',
-#
-#     }
+    #     'default': {
+    #
+    #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #
+    #         'NAME': 'progercha',
+    #
+    #         'USER': 'amirshokh',
+    #
+    #         'PASSWORD': '4748998',
+    #
+    #         'HOST': 'localhost',
+    #
+    #         'PORT': '5432',
+    #
+    #     }
 }
 
 # Password validation
@@ -127,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'uz'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -149,8 +154,14 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
-CKEDITOR_UPLOAD_PATH = "uploads/"
+
+TINYMCE_DEFAULT_CONFIG = {
+    "plugins": "image,advlist,autolink,lists,link,image,charmap,print,preview,anchor,"
+               "searchreplace,visualblocks,code,fullscreen,insertdatetime,media,table,paste,",
+    "toolbar": "undo redo | formatselect | image |",  # toolbar
+    "height": 500,  # texteditor height
+
+}
 
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 2525
@@ -162,8 +173,11 @@ EMAIL_USE_SSL = False
 LOGIN_REDIRECT_URL = '/blog'
 LOGOUT_REDIRECT_URL = '/blog'
 
-
 TELEGRAM = {
     'bot_token': '1130315755:AAGwaq3IlGeKPSrjQs83QPLgzC05Q8BTPxw',
     'channel_name': 'Progercha',
 }
+
+INTERNAL_IPS = ("127.0.0.1",)
+
+THUMBNAIL_DEBUG = True

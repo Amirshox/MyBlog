@@ -1,7 +1,9 @@
 {% load blog_tags %}
 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
     <div class="sidebar">
-
+        <div class="widget">
+            <a href="{% url 'blog:post_list' %}"><h3>Total Posts: {% total_posts %}</h3></a>
+        </div>
         <div class="widget">
             <h2 class="widget-title">Popular Posts</h2>
             {% get_most_viewed_posts as most_viewed_posts %}

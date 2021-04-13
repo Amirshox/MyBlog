@@ -82,45 +82,6 @@ def post_detail(request, year, month, day, post):
     return render(request, 'blog/post_detail.html', context=context)
 
 
-def post_share(request, post_id):
-    # Retrieve post by id
-    post = get_object_or_404(Post, id=post_id, status='published')
-    sent = False
-
-    if request.method == 'POST':
-        # Form was submitted
-        form = EmailPostForm(request.POST)
-        if form.is_valid():
-            # Form fields passed validation
-            cd = form.cleaned_data
-            post_url = request.build_absolute_uri(post.get_absolute_url())
-            subject = f"{cd['name']} recommends you read {post.title}"
-            message = f"Read {post.title} at {post_url}\n\n{cd['name']}\'s comments: {cd['comments']}"
-            send_mail(subject, message, 'admin@myblog.com', [cd['to']])
-            sent = True
-
-    else:
-        form = EmailPostForm()
-
-    context = {'post': post, 'form': form, 'sent': sent}
-    return render(request, 'blog/post/share.html', context=context)
-
-
-def post_search(request):
-    form = SearchForm()
-    query = None
-    results = []
-    if 'query' in request.GET:
-        form = SearchForm(request.GET)
-        if form.is_valid():
-            query = form.cleaned_data['query']
-            results = Post.published.annotate(
-                similarity=TrigramSimilarity('title', query), ).filter(similarity__gt=0.1).order_by('-similarity')
-
-    context = {'form': form, 'query': query, 'results': results}
-    return render(request, 'blog/post/search.html', context=context)
-
-
 def author(request):
     authors = Author.objects.all()
     context = {'authors': authors}

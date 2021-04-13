@@ -1,10 +1,11 @@
 from django.contrib import admin
+from sorl.thumbnail.admin import AdminImageMixin
 
 from .models import Post, Comment, Author
 
 
 @admin.register(Post)
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(AdminImageMixin, admin.ModelAdmin):
     list_display = ('title', 'slug', 'author', 'publish', 'status')
     list_filter = ('status', 'publish', 'author')
     search_fields = ('title', 'body')
@@ -12,12 +13,6 @@ class PostAdmin(admin.ModelAdmin):
     raw_id_fields = ('author',)
     date_hierarchy = 'publish'
     ordering = ('status', 'publish')
-    #
-    # def formatted_hit_count(self, obj):
-    #     return obj.current_hit_count if obj.current_hit_count > 0 else '-'
-    #
-    # formatted_hit_count.admin_order_field = 'hit_count'
-    # formatted_hit_count.short_description = 'Hits'
 
 
 @admin.register(Comment)
