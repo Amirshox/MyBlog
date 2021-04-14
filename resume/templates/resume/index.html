@@ -1,3 +1,4 @@
+{% load thumbnail %}
 {% load static %}
 <!doctype html>
 <html lang="en">
@@ -6,14 +7,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>resume</title>
+    <title>Resume</title>
+{#    <link rel="shortcut icon" href="{% static 'images/apple-touch-icon.png' %}" type="image/png"/>#}
+    <link rel="shortcut icon" href="{% static 'images/resume.ico' %}">
 
     <!-- Font Awesome icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
     <!-- connect Bootstrap and CSS file-->
     <link rel="stylesheet" href="{% static 'resume/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="{% static 'resume/css/resume-style.css' %}">
 </head>
 <body>
@@ -22,22 +24,27 @@
         <header>
             <div class="header">
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-8">
                         <h1 class="pl-5 ml-5">Amirshokh Mukhitdinov</h1>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <div class="right">
                             <ul>
                                 <li>
-                                    <a href=""><i class="fas fa-2x fa-phone-alt"></i></a>
+                                    <a href="tel:+998934748998"><i class="fas fa-2x fa-phone-alt"></i></a>
                                 </li>
                                 <li>
                                     <a href="https://t.me/amir_shokh"><i class="fab fa-2x fa-telegram"></i></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="fas fa-2x fa-envelope"></i></a>
+                                    <a href="mailto:amirshoxmuxitdinov@gmail.com"><i class="fas fa-2x fa-envelope"></i></a>
                                 </li>
-
+                                <li>
+                                    <a href="https://gitlab.com/amirshokh"><i class="fab fa-2x fa-gitlab"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/Amirshox"><i class="fab fa-2x fa-github"></i></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -56,7 +63,7 @@
                                     <b>Instant,</b> Tashkent - <i>backend developer</i>
                                 </li>
                                 <li class="text-muted mb-4">
-                                    <span> from September, 2020 - REAL TIME </span>
+                                    <span> from September, 2020 - to March, 2021 </span>
                                 </li>
                                 <li>
                                     <b>Freelancer</b> - <i>backend developer</i>
@@ -85,8 +92,8 @@
                                 <li>Python/Django/Flask</li>
                                 <li>Django Rest Framework</li>
                                 <li>MySQL/PostgreSQL</li>
-                                <li>Telegram bots</li>
-                                <li>React/React Native</li>
+                                <li>Telegram BOTS</li>
+                                <li>HTML/Css/JavaScript</li>
                             </ul>
                         </div>
                         <div class="languages">
@@ -115,24 +122,23 @@
                 <div class="project text-center">
                     <h1><b>Projects</b></h1>
                     <div class="all-images">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="image">
-                                    <img class="" src="../../../static/img/laptop.jpg" alt="">
-                                    <hr>
-                                    <a target="_blank" href="https://itachi.com">itachi.com</a>
+                        {% for portfolio in portfolios %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="image mb-5">
+                                        {% thumbnail portfolio.image "1000x500" crop="center" as image %}
+                                            <img src="{{ image.url }}" width="{{ image.width }}"
+                                                 height="{{ image.height }}" alt=""
+                                                 class="img-fluid">
+                                        {% endthumbnail %}
+                                        <p class="my-1"><a style="color: #1a85bf" target="_blank"
+                                                           href="{{ portfolio.url }}">{{ portfolio.title }}</a></p>
+                                        <hr>
+                                        <br>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="image">
-                                    <img class="" src="../../../static/img/laptop.jpg" alt="">
-                                    <hr>
-                                    <a target="_blank" href="https://itachi.com">itachi.com</a>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

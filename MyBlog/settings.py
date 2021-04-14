@@ -168,9 +168,6 @@ EMAIL_HOST_PASSWORD = "password"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-LOGIN_REDIRECT_URL = '/blog'
-LOGOUT_REDIRECT_URL = '/blog'
-
 TELEGRAM = {
     'bot_token': '1130315755:AAGwaq3IlGeKPSrjQs83QPLgzC05Q8BTPxw',
     'channel_name': 'Progercha',

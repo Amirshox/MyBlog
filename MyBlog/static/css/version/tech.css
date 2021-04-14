@@ -142,7 +142,7 @@ h5 {
 .blog-meta small a,
 .blog-meta small {
     font-weight: 500;
-    color: #999 !important;
+    color: #ffffff !important;
 }
 
 .fa-star {
@@ -249,14 +249,32 @@ h5 {
     visibility: visible !important;
 }
 
-.bg-orange {
-    background-color: #FF6347 !important;
+/*.bg-orange {*/
+/*    background-color: #FF6347 !important;*/
+/*}*/
+
+.bg-blue {
+    background-color: #0091e5 !important;
 }
 
-.page-title .bg-orange,
+a.bg-blue {
+    background-color: #111111;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 0.1rem 1rem;
+
+}
+
+/*.page-title .bg-orange,*/
+/*.masonry-box:hover .blog-meta span.bg-orange,*/
+/*.color-orange a {*/
+/*    background-color: #ff6347 !important;*/
+/*}*/
+
+.page-title .bg-blue,
 .masonry-box:hover .blog-meta span.bg-orange,
 .color-orange a {
-    background-color: #FF6347 !important;
+    background-color: #0091e5 !important;
 }
 
 .footer a:hover,
@@ -270,7 +288,7 @@ h5 {
 .blog-top .fa-rss,
 a:hover,
 a:focus {
-    color: #FF6347 !important;
+    color: #0091e5 !important;
 }
 .tag-cloud-single span,
 .navbar-inverse {
@@ -282,8 +300,8 @@ a:focus {
 .gp-button.btn-primary:hover,
 .gp-button.btn-primary:focus,
 .gp-button.btn-primary {
-    border-color: #DA5333 !important;
-    background: #DA5333 !important;
+    border-color: #0091e5 !important;
+    background: #0091e5 !important;
 }
 
 .fb-button.btn-primary:focus,

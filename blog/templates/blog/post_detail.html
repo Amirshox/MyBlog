@@ -118,7 +118,9 @@
                                                 <strong>Birinchi izohni siz qoldirshingiz mumkin ;)</strong>
                                             {% endfor %}
                                         {% else %}
-                                            <strong>Izohlarni o'qish uchun ro'yhatdan o'ting</strong>
+                                            <strong>Izohlar qoldirish yoki o'qish uchun
+                                                iltimos ro'yhatdan
+                                                o'ting</strong>
                                         {% endif %}
 
                                     </div>
@@ -128,23 +130,21 @@
 
                         <hr class="invis1">
 
-                        <div class="custombox clearfix">
-                            <h4 class="small-title">Leave a Reply</h4>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    {% if user.is_authenticated %}
+                        {% if user.is_authenticated %}
+                            <div class="custombox clearfix">
+                                <h4 class="small-title">Leave a Reply</h4>
+                                <div class="row">
+                                    <div class="col-lg-12">
                                         <form method="post" action="" class="form-wrapper">
                                             {% csrf_token %}
                                             {% render_field comment_form.body class="form-control" placeholder="Your comment" %}
                                             {{ comment_form.errors }}
                                             <p><input type="submit" class="btn btn-primary" value="Add comment"></p>
                                         </form>
-                                    {% else %}
-                                        <strong>Izoh qoldirish uchun iltimos ro'yhatdan o'ting</strong>
-                                    {% endif %}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        {% endif %}
                     </div><!-- end page-wrapper -->
                 </div><!-- end col -->
 

@@ -21,7 +21,7 @@
                                 <div class="blog-meta">
                                     {% for tag in first_slot.tags.all %}
                                         <small class="firstsmall">
-                                                <span class="bg-orange">
+                                                <span class="bg-blue">
                                                     <a href="{% url "blog:post_list_by_tag" tag.slug %}">
                                                         {{ tag.name }}
                                                         </a>
@@ -55,7 +55,7 @@
                                 <div class="blog-meta">
                                     {% for tag in second_slot.tags.all %}
                                         <small class="firstsmall">
-                                                                <span class="bg-orange">
+                                                                <span class="bg-blue">
                                                                     <a href="{% url "blog:post_list_by_tag" tag.slug %}">
                                                                         {{ tag.name }}
                                                                         </a>
@@ -90,7 +90,7 @@
                                 <div class="blog-meta">
                                     {% for tag in last_slot.tags.all %}
                                         <small class="firstsmall">
-                                                                <span class="bg-orange">
+                                                                <span class="bg-blue">
                                                                     <a href="{% url "blog:post_list_by_tag" tag.slug %}">
                                                                         {{ tag.name }}
                                                                         </a>
@@ -144,7 +144,7 @@
                                         <p>{{ post.body|truncatewords:30|markdown }}</p>
                                         {% for tag in post.tags.all %}
                                             <small class="firstsmall">
-                                                <a class="bg-orange" href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                                <a class="bg-blue" href="{% url "blog:post_list_by_tag" tag.slug %}">
                                                     {{ tag.name }}
                                                 </a>
                                             </small>

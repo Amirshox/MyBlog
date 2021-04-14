@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
@@ -24,8 +25,9 @@ def registerPage(request):
                 form.save()
                 user = form.cleaned_data.get('username')
                 messages.success(request, 'Account was created for ' + user)
+                print(request.META.get('HTTP_REFERER'))
 
-                return redirect('login')
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
         context = {'form': form}
         return render(request, 'accounts/register.html', context)
@@ -43,7 +45,10 @@ def loginPage(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('blog:post_list')
+                print(request.META.get('HTTP_REFERER'))
+
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
             else:
                 messages.info(request, 'Username OR password is incorrect')
 
