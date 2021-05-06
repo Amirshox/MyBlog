@@ -92,22 +92,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-
-    #     'default': {
-    #
-    #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #
-    #         'NAME': 'progercha',
-    #
-    #         'USER': 'amirshokh',
-    #
-    #         'PASSWORD': '4748998',
-    #
-    #         'HOST': 'localhost',
-    #
-    #         'PORT': '5432',
-    #
-    #     }
 }
 
 # Password validation
@@ -169,7 +153,7 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
 TELEGRAM = {
-    'bot_token': '1130315755:AAGwaq3IlGeKPSrjQs83QPLgzC05Q8BTPxw',
+    'bot_token': '\',
     'channel_name': 'Progercha',
 }
 
